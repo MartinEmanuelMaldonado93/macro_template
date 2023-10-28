@@ -8,6 +8,7 @@ const config: StorybookConfig = {
 		'@storybook/addon-onboarding',
 		'@storybook/addon-interactions',
 		'@storybook/addon-a11y',
+		'@storybook/addon-designs'
 	],
 	framework: {
 		name: '@storybook/react-vite',
@@ -15,6 +16,9 @@ const config: StorybookConfig = {
 	},
 	docs: {
 		autodocs: 'tag',
+	},
+	features: {
+		storyStoreV7: true,
 	},
 };
 export default config;
