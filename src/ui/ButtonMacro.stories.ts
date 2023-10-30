@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
-import { Button } from './Button';
+import ButtonMacro from './ButtonMacro';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
 	title: 'Example/Button',
-	component: Button,
+	component: ButtonMacro,
 	parameters: {
 		// Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
 		layout: 'centered',
@@ -14,45 +13,26 @@ const meta = {
 	tags: ['autodocs'],
 	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 	argTypes: {
-		backgroundColor: { control: 'color' },
+		// backgroundColor: { control: 'color' },
 	},
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof ButtonMacro>;
 
 export default meta;
 type ButtonStory = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary: ButtonStory = {
+export const MacroButtonPrimary: ButtonStory = {
 	args: {
-		primary: true,
-		label: 'Button',
+		children: 'Prueba children',
 	},
 };
-
-export const Secondary: ButtonStory = {
+export const MacroButtonSecondary: ButtonStory = {
 	args: {
-		label: 'Button',
+		intent: 'secondary',
 	},
 };
-
-export const Large: ButtonStory = {
+export const MacroButtonDanger: ButtonStory = {
 	args: {
-		size: 'large',
-		label: 'Button',
-	},
-};
-
-export const Small: ButtonStory = {
-	args: {
-		size: 'small',
-		label: 'Button',
-	},
-};
-
-export const Warning: ButtonStory = {
-	args: {
-		primary: true,
-		label: 'Delete now',
-		backgroundColor: 'red',
+		intent: 'danger',
 	},
 };
