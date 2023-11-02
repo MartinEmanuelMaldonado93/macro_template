@@ -3,7 +3,7 @@ import './App.css';
 import ButtonMacro from './ui/ButtonMacro';
 
 function App() {
-	const [count, set Count] = useState(0);
+	const [count, setCount] = useState(0);
 
 	return (
 		<>
