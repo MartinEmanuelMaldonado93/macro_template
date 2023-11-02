@@ -3,7 +3,7 @@ import './App.css';
 import ButtonMacro from './ui/ButtonMacro';
 
 function App() {
-	const [count, setCount] = useState(0);
+	const [count, set Count] = useState(0);
 
 	return (
 		<>
@@ -11,12 +11,8 @@ function App() {
 				<ButtonMacro onClick={() => setCount((count) => count + 1)}>
 					count is {count}
 				</ButtonMacro>
-				<ButtonMacro intent={'secondary'}>
-					Secondary
-				</ButtonMacro>
-				<ButtonMacro intent={'danger'}>
-					Danger
-				</ButtonMacro>
+				<ButtonMacro intent={'secondary'}>Secondary</ButtonMacro>
+				<ButtonMacro intent={'danger'}>Danger</ButtonMacro>
 			</div>
 		</>
 	);

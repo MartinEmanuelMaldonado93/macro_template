@@ -10,6 +10,7 @@ const buttonStyles = cva(
 				primary: 'bg-macro-blue',
 				secondary: 'bg-macro-blue-sec',
 				danger: 'bg-macro-danger focus:ring-red-500',
+				hovered: 'bg-macro-pink',
 			},
 			fullWidth: {
 				true: 'w-full',

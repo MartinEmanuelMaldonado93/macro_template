@@ -26,13 +26,21 @@ export const MacroButtonPrimary: ButtonStory = {
 		children: 'Prueba children',
 	},
 };
+export const MacroButtonPrimaryHovered: ButtonStory = {
+	args: {
+		children: 'Prueba con hover',
+		intent: 'hovered'
+	},
+};
 export const MacroButtonSecondary: ButtonStory = {
 	args: {
+		...MacroButtonPrimary.args,
 		intent: 'secondary',
 	},
 };
 export const MacroButtonDanger: ButtonStory = {
 	args: {
+		...MacroButtonPrimary.args,
 		intent: 'danger',
 	},
 };
