@@ -1,6 +1,5 @@
+import { ButtonMacro } from '@ui';
 import { useState } from 'react';
-import './App.css';
-import ButtonMacro from './ui/ButtonMacro';
 
 function App() {
 	const [count, setCount] = useState(0);

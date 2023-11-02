@@ -16,7 +16,10 @@
 
     /* Linting */
     "strict": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@ui": ["./src/ui"]
+    }
   },
   "references": [{ "path": "./tsconfig.node.json" }],
   "include": ["src"],
