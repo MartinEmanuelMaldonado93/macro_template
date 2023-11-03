@@ -29,7 +29,7 @@ export const MacroButtonPrimary: ButtonStory = {
 export const MacroButtonPrimaryHovered: ButtonStory = {
 	args: {
 		children: 'Prueba con hover',
-		intent: 'hovered'
+		intent: 'hovered',
 	},
 };
 export const MacroButtonSecondary: ButtonStory = {

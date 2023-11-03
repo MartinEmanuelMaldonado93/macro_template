@@ -6,7 +6,7 @@ function App() {
 
 	return (
 		<>
-			<div className="flex justify-evenly border p-8 rounded-sm">
+			<div className="flex justify-evenly rounded-sm border p-8">
 				<ButtonMacro onClick={() => setCount((count) => count + 1)}>
 					count is {count}
 				</ButtonMacro>
