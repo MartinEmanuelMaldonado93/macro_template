@@ -23,18 +23,22 @@ const buttonStyles = cva(
 	},
 );
 
-type ButtonProps = VariantProps<typeof buttonStyles> & ComponentProps<'button'>;
+type ButtonProps = VariantProps<typeof buttonStyles> &
+	ComponentProps<'button'> & {
+		type: React.ButtonHTMLAttributes<'button' | 'submit' | 'reset' | undefined>;
+	};
 
 export default function ButtonMacro({
 	intent,
 	fullWidth,
+	type = 'button',
 	className,
 	children,
 	...props
 }: ButtonProps) {
 	return (
 		<button
-			type="button"
+			type={type}
 			className={twMerge(buttonStyles({ intent, fullWidth }), className)}
 			{...props}
 		>

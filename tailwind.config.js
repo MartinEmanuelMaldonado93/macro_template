@@ -8,10 +8,14 @@ export default {
 				'macro-blue-sec': 'rgb(32,58,233)',
 				'macro-pink': 'rgb(255,140,197)',
 				'macro-danger': 'rgb(255,67,81)',
-			}
+			},
 		},
 	},
 	plugins: [
-		//import('@tailwindcss/forms'),
+		// eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
+		require('@tailwindcss/forms')({
+			strategy: 'base', // only generate global styles
+			// strategy: 'class', // only generate classes
+		}),
 	],
 };
