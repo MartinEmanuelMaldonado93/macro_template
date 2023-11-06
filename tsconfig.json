@@ -20,7 +20,9 @@
     "paths": {
       "@ui": ["./src/ui"],
       "@utils": ["./src/utils"],
+      "@pages": ["./src/pages"],
       "@envs": ["./src/environments"],
+      "@consts": ["./src/constants"],
       "@components": ["./src/components"],
       "@zodSchemas": ["./src/zodSchemas"],
     }

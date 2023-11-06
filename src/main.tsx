@@ -2,26 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Sucursal from './pages/Sucursal.tsx';
-import Ventas from './pages/Ventas.tsx';
+import { PRIVATE_ROUTES, PUBLIC_ROUTES } from '@consts';
+import { Sucursal, Ventas, GetCode } from '@pages';
 import './index.css';
-import GetCode from './pages/GetCode.tsx';
 
 const router = createBrowserRouter([
 	{
-		path: '/',
+		path: PUBLIC_ROUTES.HOME,
 		element: <App />,
 	},
 	{
-		path: '/getcode',
+		path: PRIVATE_ROUTES.GET_CODE,
 		element: <GetCode />,
 	},
 	{
-		path: '/ventas',
+		path: PRIVATE_ROUTES.VENTAS,
 		element: <Ventas />,
 	},
 	{
-		path: '/sucursal',
+		path: PRIVATE_ROUTES.SUCURSAL,
 		element: <Sucursal />,
 	},
 ]);

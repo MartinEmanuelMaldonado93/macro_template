@@ -10,6 +10,8 @@ export default defineConfig({
 		alias: {
 			'@ui': pathFile('./src/ui'),
 			'@fonts': pathFile('./public/fonts'),
+			'@pages': pathFile('./public/pages'),
+			'@consts': pathFile('./public/constants'),
 			'@envs': pathFile('./src/environments'),
 			'@utils': pathFile('./src/utils'),
 			'@components': pathFile('./src/components'),
