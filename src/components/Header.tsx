@@ -1,6 +1,9 @@
-import { envs } from '@envs';
+import { IconMacro } from '@ui';
 
 export default function Header() {
-	envs.VITE_MY_BASE_URL;
-	return <div>Header</div>;
+	return (
+		<div className="sticky border bg-bm-gray-light p-2">
+			<IconMacro />
+		</div>
+	);
 }

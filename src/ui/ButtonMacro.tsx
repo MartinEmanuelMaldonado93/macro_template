@@ -1,6 +1,6 @@
+import type { ComponentProps } from 'react';
 import { cva, VariantProps } from 'class-variance-authority';
-import { ComponentProps } from 'react';
-import { twMerge } from 'tailwind-merge';
+import { cn } from '@utils';
 
 const buttonStyles = cva(
 	'text-white px-4 py-2 rounded-full disabled:opacity-60 transition-all duration-600 hover:bg-opacity-80 hover:bg-macro-pink active:scale-95',
@@ -25,7 +25,9 @@ const buttonStyles = cva(
 
 type ButtonProps = VariantProps<typeof buttonStyles> &
 	ComponentProps<'button'> & {
-		type: React.ButtonHTMLAttributes<'button' | 'submit' | 'reset' | undefined>;
+		type?: React.ButtonHTMLAttributes<
+			'button' | 'submit' | 'reset' | undefined
+		>;
 	};
 
 export default function ButtonMacro({
@@ -39,7 +41,7 @@ export default function ButtonMacro({
 	return (
 		<button
 			type={type}
-			className={twMerge(buttonStyles({ intent, fullWidth }), className)}
+			className={cn(buttonStyles({ intent, fullWidth, className }))}
 			{...props}
 		>
 			{children}

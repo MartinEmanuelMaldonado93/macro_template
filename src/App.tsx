@@ -1,11 +1,15 @@
+import { QueryClient } from '@tanstack/react-query';
+import Login from './pages/Login';
+import { Header } from '@components';
 // import { Menu } from '@headlessui/react';
-import { FontTest } from '@components';
+const client = new QueryClient();
 
 function App() {
 	return (
-		<div className="flex min-h-screen flex-col flex-wrap content-center justify-center bg-bm-gray-light">
-			<FontTest />
-		</div>
+		<>
+			<Header />
+			<Login />
+		</>
 	);
 }
 
