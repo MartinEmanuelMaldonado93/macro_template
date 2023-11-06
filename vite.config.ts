@@ -9,13 +9,14 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			'@ui': pathFile('./src/ui'),
-			'@fonts': pathFile('./public/fonts'),
-			'@pages': pathFile('./public/pages'),
-			'@consts': pathFile('./public/constants'),
+			'@pages': pathFile('./src/pages'),
+			'@consts': pathFile('./src/constants'),
 			'@envs': pathFile('./src/environments'),
 			'@utils': pathFile('./src/utils'),
 			'@components': pathFile('./src/components'),
 			'@zodSchemas': pathFile('./src/zodSchemas'),
+			// public
+			'@fonts': pathFile('./public/fonts'),
 		},
 	},
 });

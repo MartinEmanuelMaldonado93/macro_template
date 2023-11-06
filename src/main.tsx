@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { PRIVATE_ROUTES, PUBLIC_ROUTES } from '@consts';
-import { Sucursal, Ventas, GetCode } from '@pages';
+import { Sucursal, Ventas, GetCode, NotFound404 } from '@pages';
 import './index.css';
 
 const router = createBrowserRouter([
 	{
 		path: PUBLIC_ROUTES.HOME,
 		element: <App />,
+		errorElement: <NotFound404 />,
 	},
 	{
 		path: PRIVATE_ROUTES.GET_CODE,

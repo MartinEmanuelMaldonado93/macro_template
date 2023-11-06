@@ -12,6 +12,6 @@ export default function MultiStep() {
 	);
 }
 
-function Step() {
-	return <div>circle</div>;
-}
+// function Step() {
+// 	return <div>circle</div>;
+// }

@@ -3,11 +3,11 @@ import { useLayoutEffect } from 'react';
 
 export function useFadeInText(querySelector: string) {
 	useLayoutEffect(() => {
-		const labels = document.querySelectorAll(querySelector);
-		if (!labels) throw new Error('query didnt match with any tag');
+		const elements = document.querySelectorAll(querySelector);
+		if (!elements) throw new Error('query didnt match with any tag');
 
 		animate(
-			[...labels],
+			[...elements],
 			{
 				// y: ['30%', '0%'],// not gpu accelerated
 				transform: ['translateY(15px)', 'translateY(0px)'],
