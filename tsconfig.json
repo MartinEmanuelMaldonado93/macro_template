@@ -18,7 +18,11 @@
     "strict": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@ui": ["./src/ui"]
+      "@ui": ["./src/ui"],
+      "@utils": ["./src/utils"],
+      "@envs": ["./src/environments"],
+      "@components": ["./src/components"],
+      "@zodSchemas": ["./src/zodSchemas"],
     }
   },
   "references": [{ "path": "./tsconfig.node.json" }],

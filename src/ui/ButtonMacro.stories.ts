@@ -22,11 +22,16 @@ type ButtonStory = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const MacroButtonPrimary: ButtonStory = {
+	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+	//@ts-expect-error
 	args: {
 		children: 'Prueba children',
 	},
 };
+
 export const MacroButtonPrimaryHovered: ButtonStory = {
+	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+	//@ts-expect-error
 	args: {
 		children: 'Prueba con hover',
 		intent: 'hovered',

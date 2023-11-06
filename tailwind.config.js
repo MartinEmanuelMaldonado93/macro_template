@@ -3,11 +3,20 @@ export default {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		extend: {
+			// colors from https://www.macro.com.ar/home-page
 			colors: {
-				'macro-blue': 'rgb(0,48,87)',
-				'macro-blue-sec': 'rgb(32,58,233)',
-				'macro-pink': 'rgb(255,140,197)',
-				'macro-danger': 'rgb(255,67,81)',
+				'bm-blue': 'hsl(217, 100%, 16%)',
+				'bm-blue-light': 'hsl(232, 82%, 52%)',
+				'bm-lightblue': 'hsl(197, 100%, 45%)',
+				'bm-red': 'hsl(356, 100%, 63%)',
+				'bm-red-light': 'hsl(346, 60%, 93%)',
+				'bm-gray': 'hsl(0, 0%, 71%)',
+				'bm-gray-light': 'hsl(30, 2%, 84%)',
+				'bm-pink': 'hsl(330, 100%, 77%)',
+			},
+			fontFamily: {
+				titillium: ["'titillium'", 'system-ui', '-apple-system'],
+				'sans-public': ["'sans-public'", 'system-ui', '-apple-system'],
 			},
 		},
 	},
