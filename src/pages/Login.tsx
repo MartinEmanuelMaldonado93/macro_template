@@ -1,25 +1,32 @@
-import { ButtonMacro, InputEmail, InputNumber } from '@ui';
+import { ButtonMacro, InputMacro } from '@ui';
+import { useFadeInText } from '@utils';
 
 export default function Login() {
+	useFadeInText('.label');
+
 	return (
-		<div className="flex h-screen flex-col flex-wrap content-center justify-center bg-white">
+		<form className="flex h-screen flex-col flex-wrap content-center justify-center gap-6 bg-white">
 			<div className="flex w-full max-w-sm flex-col gap-4 px-6">
 				<div>
-					<label className="block" htmlFor="input-cuil">
+					<label className="label block" htmlFor="input-cuil">
 						CUIT
 					</label>
-					<InputNumber id="input-cuil" className="w-full" />
+					<InputMacro
+						id="input-cuil"
+						className="w-full"
+						pattern="/^\d{2}\-\d{8}\-\d{1}$/"
+					/>
 				</div>
 				<div>
-					<label className="block" htmlFor="input-email">
+					<label className="label block" htmlFor="input-email">
 						EMAIL
 					</label>
-					<InputEmail id="input-email" className="w-full"/>
+					<InputMacro id="input-email" className="w-full" />
 				</div>
 			</div>
-			<div>
-				<ButtonMacro>Solicitar</ButtonMacro>
+			<div className="flex w-full justify-center">
+				<ButtonMacro type={'submit'}>Solicitar</ButtonMacro>
 			</div>
-		</div>
+		</form>
 	);
 }

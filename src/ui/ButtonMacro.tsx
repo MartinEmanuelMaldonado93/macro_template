@@ -1,16 +1,16 @@
 import type { ComponentProps } from 'react';
 import { cva, VariantProps } from 'class-variance-authority';
-import { cn } from '@utils';
+import { twMerge } from 'tailwind-merge';
 
 const buttonStyles = cva(
 	'text-white px-4 py-2 rounded-full disabled:opacity-60 transition-all duration-600 hover:bg-opacity-80 hover:bg-macro-pink active:scale-95',
 	{
 		variants: {
 			intent: {
-				primary: 'bg-macro-blue',
-				secondary: 'bg-macro-blue-sec',
-				danger: 'bg-macro-danger focus:ring-red-500',
-				hovered: 'bg-macro-pink',
+				primary: 'bg-bm-blue',
+				secondary: 'bg-bm-blue-light',
+				danger: 'bg-bm-red focus:ring-red-500',
+				hovered: 'bg-bm-pink',
 			},
 			fullWidth: {
 				true: 'w-full',
@@ -41,7 +41,7 @@ export default function ButtonMacro({
 	return (
 		<button
 			type={type}
-			className={cn(buttonStyles({ intent, fullWidth, className }))}
+			className={twMerge(buttonStyles({ intent, fullWidth, className }))}
 			{...props}
 		>
 			{children}
