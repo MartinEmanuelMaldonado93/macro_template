@@ -1,5 +1,5 @@
 import { useRouteError } from 'react-router-dom';
-import { useFadeInText } from '../utils/motion-utils';
+import { useFadeInText } from '../utils/motion-hooks';
 
 export default function NotFound404() {
 	const error = useRouteError() as Error & { statusText: string };

@@ -1,3 +1,3 @@
 export * from './cn';
-export * from './motion-utils';
+export * from './motion-hooks';
 export * from './test';
