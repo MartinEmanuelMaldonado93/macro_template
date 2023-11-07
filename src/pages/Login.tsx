@@ -1,9 +1,11 @@
 import { ButtonMacro, InputMacro } from '@ui';
 import { useFadeInText } from '@utils';
+import { useNavigate } from 'react-router-dom';
+import { PRIVATE_ROUTES } from '@constans';
 
 export default function Login() {
 	useFadeInText('.label');
-
+	const navigate = useNavigate();
 	return (
 		<form className="flex h-screen flex-col flex-wrap content-center justify-center gap-6 bg-white">
 			<div className="flex w-full max-w-sm flex-col gap-4 px-6">
@@ -25,7 +27,7 @@ export default function Login() {
 				</div>
 			</div>
 			<div className="flex w-full justify-center">
-				<ButtonMacro type={'submit'}>Solicitar</ButtonMacro>
+				<ButtonMacro type={'submit'} onClick={()=> navigate(PRIVATE_ROUTES.VENTAS)}>Solicitar</ButtonMacro>
 			</div>
 		</form>
 	);

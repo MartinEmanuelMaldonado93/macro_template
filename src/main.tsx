@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { PRIVATE_ROUTES, PUBLIC_ROUTES } from '@consts';
+import { PRIVATE_ROUTES, PUBLIC_ROUTES } from '@constans';
 import { Sucursal, Ventas, GetCode, NotFound404 } from '@pages';
 import './index.css';
 

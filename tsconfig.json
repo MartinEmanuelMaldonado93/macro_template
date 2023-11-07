@@ -22,7 +22,7 @@
       "@utils": ["./src/utils"],
       "@pages": ["./src/pages"],
       "@envs": ["./src/environments"],
-      "@consts": ["./src/constants"],
+      "@constans": ["./src/constants"],
       "@components": ["./src/components"],
       "@zodSchemas": ["./src/zodSchemas"],
     }
